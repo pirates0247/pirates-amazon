@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/profile.css">
+
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="left-section">
+      <a class="amazon-link header-link" href="index.html">
+        <img class="amazon-logo" src="images/amazon-logo-white.png">
+        <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png">
+      </a>
+    </div>
+
+    <div class="middle-section">
+      <div class="header-center-title">Account</div>
+    </div>
+
+    <div class="right-section">
+      <div id="header-profile" class="header-profile"></div>
+    </div>
+  </div>
+
+
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-title">Sign in</div>
+      <div class="login-subtitle">Welcome back. Login to continue shopping.</div>
+
+      <form class="js-login-form" autocomplete="off">
+        <label class="input-group">
+          <div class="input-label">Email</div>
+          <input class="form-input" type="email" name="email" required placeholder="you@example.com" />
+        </label>
+
+        <label class="input-group">
+          <div class="input-label">Password</div>
+          <input class="form-input" type="password" name="password" required placeholder="Your password" />
+        </label>
+
+        <button class="login-btn" type="submit">Login</button>
+
+        <div class="login-error js-login-error" role="alert" hidden></div>
+
+        <div class="login-footer">
+          <span class="login-footer-text">By continuing, you agree to our</span>
+          <a class="link-primary" href="#">Terms</a>
+        </div>
+      </form>
+
+      <div class="login-logged-in-banner js-logged-in" hidden>
+        <div class="logged-in-title">Logged in</div>
+        <div class="logged-in-details">
+          <div>Account: <span class="js-current-user-email"></span></div>
+          <div>Last login: <span class="js-last-login-time"></span></div>
+        </div>
+        <button class="secondary-btn js-logout-btn" type="button">Logout</button>
+      </div>
+
+      <div class="login-history" hidden>
+        <div class="login-history-title">Login history (local)</div>
+        <div class="login-history-list js-login-history"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/login.js"></script>
+  <script type="module" src="scripts/profile.js"></script>
+</body>
+
+</html>
